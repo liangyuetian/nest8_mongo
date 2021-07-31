@@ -28,7 +28,7 @@ module.exports = {
     //   'functions': 'never',
     // }],
     'quotes': ['error', 'single'],
-    'semi': ['error', 'never'],
+    // 'semi': ['error', 'never'],
     'prefer-const': ['error', { destructuring: 'all' }],
     '@typescript-eslint/no-var-requires': 'off'
   },
