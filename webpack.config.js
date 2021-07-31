@@ -4,6 +4,7 @@ const nodeExternals = require('webpack-node-externals');
 const { RunScriptWebpackPlugin } = require('run-script-webpack-plugin');
 
 module.exports = {
+  // webpack/hot/poll?1000 轮询模式
   entry: ['webpack/hot/poll?100', './src/main.ts'],
   target: 'node',
   devtool: 'source-map',
