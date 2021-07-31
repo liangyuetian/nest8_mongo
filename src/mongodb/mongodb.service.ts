@@ -7,6 +7,11 @@ import { User, UserDocument } from './schema/user.schema';
 export class MongodbService {
   constructor(@InjectModel(User.name) private userModel: Model<UserDocument>) {}
   async query(): Promise<User[]> {
-    return this.userModel.find({}, { username: 1, email: 1 }).limit(2).exec();
+    console.log(1);
+    return this.userModel
+      .find({}, { username: 1, email: 1 })
+      .limit(10)
+      .sort({ add_time: -1 })
+      .exec();
   }
 }
