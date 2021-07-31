@@ -7,15 +7,12 @@ import { Cat, CatSchema } from '../mongodb/schema/cat.schema';
 console.log(Cat.name);
 @Module({
   imports: [
-    MongooseModule.forFeature(
-      [
-        {
-          name: Cat.name,
-          schema: CatSchema,
-        },
-      ],
-      'yapi',
-    ),
+    MongooseModule.forFeature([
+      {
+        name: Cat.name,
+        schema: CatSchema,
+      },
+    ]),
   ],
   controllers: [CatsController],
   providers: [CatsService],
