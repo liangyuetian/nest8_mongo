@@ -6,7 +6,7 @@ declare const module: any;
 async function bootstrap() {
   console.log('服务开始启动...');
   const app = await NestFactory.create(AppModule);
-  const port = 3000;
+  const port = 3095;
   await app.listen(port, '0.0.0.0');
   console.log(`服务开始启动成功: ${await app.getUrl()}`);
 

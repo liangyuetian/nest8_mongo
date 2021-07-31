@@ -1,0 +1,8 @@
+GET {{host}}/cats/create?name=m&age=2&breed=橘猫
+Accept: application/json
+
+###
+GET {{host}}/cats/findAll?name=m&age=2&breed=橘猫
+Accept: application/json
+
+###
