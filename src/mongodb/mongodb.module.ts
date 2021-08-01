@@ -7,7 +7,7 @@ import { User, UserSchema } from './schema/user.schema';
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb://yapi:123456@127.0.0.1:27017/yapi'),
+    MongooseModule.forRoot('mongodb://l:123456@127.0.0.1:27017/l'),
     MongooseModule.forFeature([
       {
         name: Cat.name,

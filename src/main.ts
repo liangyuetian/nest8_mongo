@@ -1,5 +1,6 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
+import * as cookieParser from 'cookie-parser';
 
 declare const module: any;
 
@@ -8,6 +9,7 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule, {
     logger: ['error'],
   });
+  app.use(cookieParser());
   const port = 3095;
   await app.listen(port, '0.0.0.0');
   console.log(`服务开始启动成功: ${await app.getUrl()}`);
